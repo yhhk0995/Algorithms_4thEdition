@@ -9,6 +9,8 @@ import numpy as np
 
 fig = plt.figure()  # create a figure instance
 
+plt.ion()
+
 # ax1 = fig.add_subplot(2, 1, 1)  # 2 rows, 1 column, 1st plot
 # ax2 = fig.add_subplot(2, 1, 2)  # 2 rows, 1 column, 1st plot
 
@@ -32,7 +34,16 @@ np.random.seed(20180802)
 n, bins, patches = ax2.hist(np.random.randn(1000), 50, facecolor='yellow', edgecolor='blue')
 ax2.set_xlabel('time (s)')
 
-ax2.clear()
+plt.pause(1.5)
+
+# plt.show()
+
+# ax2.clear()
+
+plt.cla()
+
 ax2.bar(range(10), range(10), align='center')
+
+plt.ioff()
 
 plt.show()
